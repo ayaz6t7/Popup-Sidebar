@@ -1,0 +1,131 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container:before {
+  content: "";
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 0;
+}
+
+.container.overlay-active:before {
+  display: block;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.btn {
+  display: flex;
+  width: 115px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  padding: 9px 12px;
+  font-weight: 400;
+  font-size: 9px;
+  line-height: 11px;
+  letter-spacing: 1.4%;
+  border: 1px solid #e5e5e5;
+  background-color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  gap: 8px;
+  text-align: start;
+  font-family: "Suisse Int";
+}
+
+.btn:hover {
+  background-color: #e5e5e5;
+}
+.active-tab {
+  background-color: #e5e5e5;
+}
+.side-bar {
+  display: none;
+  position: absolute;
+  right: 0;
+  height: calc(100vh - 140px);
+  width: 30%;
+  background-color: #fff;
+  flex-direction: column;
+  border-radius: 12px;
+  padding: 110px 107px 0 107px;
+  border: 1px solid #e5e5e5;
+  z-index: 1;
+}
+
+.tab {
+  position: relative;
+}
+
+h3 {
+  margin-top: 40px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 25.94px;
+  letter-spacing: -1.8%;
+  color: #030706;
+}
+
+p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19.6px;
+  letter-spacing: 1.2%;
+  color: gray;
+}
+
+.close {
+  position: absolute;
+  right: -76px;
+  top: -84px;
+  display: flex;
+  justify-content: end;
+}
+
+.close-btn {
+  background-color: transparent;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  color: #fff;
+  border: 1px solid #d9d9d9;
+  border-radius: 100%;
+}
+
+#shipping-body,
+#installation-body,
+#warranty-body {
+  display: none;
+}
+
+.active #shipping-body,
+.active #installation-body,
+.active #warranty-body {
+  display: block;
+}
