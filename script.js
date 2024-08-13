@@ -48,6 +48,7 @@ function showTab(tab, btn) {
 tab1.addEventListener("click", function () {
   showTab(shippingBody, tab1);
 });
+// coment
 
 tab2.addEventListener("click", function () {
   showTab(installationBody, tab2);
